@@ -1,0 +1,25 @@
+Header {
+    links remain
+}
+
+Home {
+    Done
+    note : Enable <Typewriter/>
+}
+
+About {
+    Done
+}
+
+Portfolio {
+remaining
+}
+
+Contact {
+
+}
+
+Footer {
+done
+}
+

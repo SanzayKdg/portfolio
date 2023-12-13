@@ -1,0 +1,339 @@
+.contact__container {
+    padding: 0 8rem;
+    margin-bottom: 16rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+}
+
+.contact__heading {
+    font-family: var(--heading-font-family);
+    font-size: var(--h4-font-size);
+    font-weight: 600;
+    line-height: (--h4-line-height);
+    color: var(--secondary-color);
+}
+
+.contact__bottom {
+    display: flex;
+    gap: 4rem;
+}
+
+.left__contact,
+.right__contact__section {
+    box-shadow: 0px 0px 15px 5px rgba(38, 31, 34, 0.1);
+}
+
+.left__contact {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    padding: 2rem;
+}
+
+.contact__info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.icon__container {
+    background-color: #1480fb2c;
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 360px;
+}
+
+.icon__container:hover {
+    background-color: var(--secondary-color);
+}
+
+.contact__icons {
+    height: 2rem;
+    width: 2rem;
+}
+
+
+.contact__label {
+    font-family: var(--heading-font-family);
+    font-size: var(--h5-font-size);
+    font-weight: 500;
+    line-height: var(--h5-line-height);
+    color: var(--black);
+}
+
+.contact__description {
+    font-family: var(--base-font-family);
+    font-size: var(--p-font-size);
+    font-weight: var(--base-font-weight);
+    line-height: var(--p-line-height);
+    color: var(--black-75);
+}
+
+
+.google__map {
+    width: 25rem;
+    height: 18.75rem;
+}
+
+.right__contact__section {
+    width: 100%;
+}
+
+.contact__form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.form__label {
+    margin-bottom: 8px !important;
+    font-family: var(--heading-font-family);
+    font-size: 21px;
+    font-weight: 600;
+    line-height: 30px;
+}
+
+.form__input {
+    background-color: var(--black-10) !important;
+    padding: 24px;
+    font-family: var(--base-font-family);
+    font-size: 21px;
+    font-weight: 400;
+    line-height: 30px;
+}
+
+
+.send__form__btn {
+    background-color: var(--black);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem 3rem;
+    gap: 1rem;
+}
+
+.send__form__btn:hover {
+    background-color: #261f22ed;
+}
+
+.send__text {
+    font-family: var(--heading-font-family);
+    font-size: var(--h6-font-size);
+    line-height: var(--h6-line-height);
+    font-weight: 500;
+    color: #fff;
+}
+
+.send__btn__icon {
+    width: 2rem;
+    height: 2rem;
+}
+
+
+
+
+/* 2. Styles for screens between 1200px and 600px */
+@media screen and (max-width: 1200px) and (min-width: 650px) {
+    .contact__heading {
+        font-size: var(--tab-h4-font-size);
+        line-height: (--tab-h4-line-height);
+    }
+
+    .left__contact {
+        gap: 2rem;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 2rem;
+    }
+
+    .contact__info {
+        gap: 8px;
+    }
+
+    .contact__label {
+        font-size: var(--tab-h5-font-size);
+        line-height: var(--tab-h5-line-height);
+    }
+
+    .contact__description {
+        font-size: var(--tab-p-font-size);
+        line-height: var(--tab-p-line-height);
+    }
+
+    .contact__bottom {
+        flex-direction: column;
+    }
+
+    .contact__map {
+        width: 100%;
+    }
+
+    .google__map {
+        width: 100%;
+        height: 18.75rem;
+    }
+
+    .icon__container {
+        height: 3rem;
+        width: 3rem;
+    }
+
+    .contact__icons {
+        height: 1.5rem;
+        width: 1.5rem;
+    }
+}
+
+/* 3. Styles for screens below 600px */
+@media screen and (max-width: 650px) and (min-width: 520px) {
+    .contact__container {
+        padding: 0 4rem;
+        margin-bottom: 6rem;
+    }
+
+    .contact__heading {
+        font-size: var(--mobile-h4-font-size);
+        line-height: (--mobile-h4-line-height);
+
+    }
+
+    .left__contact {
+        gap: 2rem;
+
+    }
+
+    .contact__label {
+        font-size: var(--mobile-h5-font-size);
+        line-height: var(--mobile-h5-line-height);
+    }
+
+    .contact__description {
+        font-size: var(--mobile-p-font-size);
+        line-height: var(--mobile-p-line-height);
+
+    }
+
+    .contact__bottom {
+        flex-direction: column;
+    }
+
+    .google__map {
+        width: 100%;
+        height: 18.75rem;
+    }
+
+    .icon__container {
+        height: 3rem;
+        width: 3rem;
+    }
+
+    .contact__icons {
+        height: 1.5rem;
+        width: 1.5rem;
+    }
+
+    .form__label {
+        font-size: 18px;
+        line-height: 26px;
+    }
+
+    .form__input {
+        font-size: 18px;
+        line-height: 26px;
+    }
+
+    .send__form__btn {
+        padding: 16px 32px;
+    }
+
+    .send__text {
+        font-size: var(--mobile-h6-font-size);
+        line-height: var(--mobile-h6-line-height);
+    }
+
+    .send__btn__icon {
+        height: 1.5rem;
+        width: 1.5rem;
+    }
+}
+
+
+/* 3. Styles for screens below 600px */
+@media screen and (max-width: 520px) {
+    .contact__container {
+        padding: 0 1.5rem;
+        margin-bottom: 6rem;
+    }
+
+    .contact__heading {
+        font-size: var(--mobile-h4-font-size);
+        line-height: (--mobile-h4-line-height);
+
+    }
+
+    .left__contact {
+        gap: 2rem;
+
+    }
+
+    .contact__label {
+        font-size: 14px;
+        line-height: 14px;
+    }
+
+    .contact__description {
+        font-size: 14px;
+        line-height: 14px;
+
+    }
+
+    .contact__bottom {
+        flex-direction: column;
+    }
+
+    .google__map {
+        width: 100%;
+        height: 18.75rem;
+    }
+
+    .icon__container {
+        height: 2rem;
+        width: 2rem;
+    }
+
+    .contact__icons {
+        height: 1rem;
+        width: 1rem;
+    }
+
+    .form__label {
+        font-size: 18px;
+        line-height: 26px;
+    }
+
+    .form__input {
+        font-size: 18px;
+        line-height: 26px;
+    }
+
+    .send__form__btn {
+        padding: 16px 32px;
+    }
+
+    .send__text {
+        font-size: var(--mobile-h6-font-size);
+        line-height: var(--mobile-h6-line-height);
+    }
+
+    .send__btn__icon {
+        height: 1.5rem;
+        width: 1.5rem;
+    }
+}

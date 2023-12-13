@@ -1,0 +1,159 @@
+.hero__section {
+    padding: 0 16rem;
+    margin-bottom: 16rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero__title1 {
+    background: rgb(20, 126, 251);
+    background: linear-gradient(90deg, rgba(20, 126, 251, 1) 0%, rgba(38, 31, 34, 1) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-align: center;
+    font-family: var(--heading-font-family);
+    font-size: var(--h3-font-size);
+    line-height: var(--h3-line-height);
+    font-weight: var(--h3-font-weight);
+    margin-bottom: 2rem;
+}
+
+.hero__mainTitle {
+    text-align: center;
+    font-family: var(--heading-font-family);
+    font-size: 105px;
+    line-height: 134px;
+    margin-bottom: 2rem;
+    font-weight: 600;
+    color: var(--black);
+}
+
+.hero__description {
+    width: 44rem;
+    text-align: center;
+    font-family: var(--base-font-family);
+    font-size: var(--p-font-size);
+    font-weight: var(--base-font-weight);
+    line-height: var(--p-line-height);
+    color: var(--black);
+    margin-bottom: 6rem;
+}
+
+.hero__button {
+    display: flex;
+    padding: 1.5rem 3rem;
+    border-radius: 50px;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--black);
+
+}
+
+.hero__button:hover {
+    background-color: #261f22ed;
+}
+
+.hero__link {
+    color: #fff;
+    font-family: var(--heading-font-family);
+    font-size: var(--h6-font-size);
+    font-weight: 600;
+    line-height: var(--h6-line-height);
+    margin-right: 1.5rem;
+
+}
+
+.hero__down__icon {
+    height: 2rem;
+    width: 2rem;
+}
+
+/* 2. Styles for screens between 1200px and 600px */
+@media screen and (max-width: 1200px) and (min-width: 600px) {
+    .hero__section {
+        margin-bottom: 10.5rem;
+        padding: 0 4rem;
+    }
+
+    .hero__title1 {
+        font-size: var(--tab-h3-font-size);
+        line-height: var(--tab-h3-line-height);
+        width: fit-content;
+
+    }
+
+    .hero__mainTitle {
+        font-size: var(--tab-h1-font-size);
+        line-height: var(--tab-h1-line-height);
+        font-weight: var(--tab-mobile-h1-font-weight);
+        width: fit-content;
+
+    }
+
+    .hero__description {
+        font-size: var(--tab-p-font-size);
+        line-height: var(--tab-p-line-height);
+        width: fit-content;
+        margin-bottom: 5rem;
+    }
+
+    .hero__link {
+        font-size: var(--tab-h6-font-size);
+        margin-right: 1rem;
+        line-height: (--tab-h6-line-height);
+    }
+
+    .hero__down__icon {
+        height: 1.5rem;
+        width: 1.5rem;
+    }
+}
+
+/* 3. Styles for screens below 600px */
+@media screen and (max-width: 600px) {
+    .hero__section {
+        padding: 0 4rem;
+        margin-bottom: 6rem;
+    }
+
+    .hero__title1 {
+        font-size: var(--mobile-h3-font-size);
+        line-height: var(mobile-h3-line-height);
+        width: fit-content;
+
+    }
+
+    .hero__mainTitle {
+        font-size: var(--mobile-h1-font-size);
+        line-height: var(--mobile-h1-line-height);
+        font-weight: var(--tab-mobile-h1-font-weight);
+        width: fit-content;
+
+    }
+
+    .hero__description {
+        font-size: var(--mobile-p-font-size);
+        line-height: var(--mobile-p-line-height);
+        width: fit-content;
+        margin-bottom: 6rem;
+    }
+
+    .hero__button {
+        width: 70vw;
+        padding: 24px 32px;
+    }
+
+    .hero__link {
+        font-size: var(--mobile-h6-font-size);
+        margin-right: 1rem;
+        line-height: (--mobile-h6-line-height);
+    }
+
+    .hero__down__icon {
+        height: 1.5rem;
+        width: 1.5rem;
+    }
+}

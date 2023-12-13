@@ -1,0 +1,232 @@
+.about__container {
+    margin-bottom: 16rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.about__top {
+    padding: 0 8rem;
+    margin-bottom: 8rem;
+
+}
+
+.about__heading {
+    font-family: var(--heading-font-family);
+    font-size: var(--h4-font-size);
+    font-weight: 600;
+    line-height: var(--h4-line-height);
+    color: var(--secondary-color);
+    margin-bottom: 2rem;
+}
+
+.about__description1 {
+    margin-bottom: 1rem;
+
+}
+
+.about__description {
+    font-family: var(--base-font-family);
+    font-size: var(--p-font-size);
+    font-weight: var(--base-font-weight);
+    line-height: var(--p-line-height);
+    color: var(--black);
+}
+
+.about__mid {
+    display: flex;
+    height: 24rem;
+    margin-bottom: 8rem;
+    justify-content: center;
+}
+
+.about__image {
+    width: 100%;
+    margin-right: 2rem;
+    height: 100%;
+}
+
+.about__image:nth-child(3) {
+    margin: 0;
+}
+
+.about__bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.tech__stack__btn {
+    margin-bottom: 8rem;
+    padding: 1.5rem 3rem;
+    background-color: var(--black-10);
+    border-radius: 50px;
+    width: 30rem;
+    text-align: center;
+    color: var(--black-50);
+    font-size: 15px;
+    line-height: 30px;
+    font-weight: bold;
+}
+
+.tech__stack__list {
+    display: flex;
+    padding: 0 8rem;
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+}
+
+.tech {
+    margin-right: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 9.5rem;
+    width: 15.25rem;
+    background-color: var(--black-5);
+    border-radius: 8px;
+}
+
+
+
+.tech__image {
+    height: 3rem;
+    width: 3rem;
+    margin-bottom: 1rem;
+}
+
+.tech__name {
+    font-family: var(--heading-font-family);
+    font-size: var(--h6-font-size);
+    line-height: var(--h6-line-height);
+    font-weight: 600;
+    color: var(--black);
+}
+
+/* 2. Styles for screens between 1200px and 600px */
+@media screen and (max-width: 1200px) and (min-width: 600px) {
+    .about__container{
+        margin-bottom: 10.5rem;
+
+    }
+    .about__top, .about__mid, .tech__stack__btn {
+        margin-bottom: 6rem;
+    }
+    .about__heading {
+        font-size: var(--tab-h4-font-size);
+        line-height: var(--tab-h4-line-height);
+    }
+
+    .about__description {
+        font-size: var(--tab-p-font-size);
+        line-height: var(--tab-p-line-height);
+    }
+
+    .about__mid, .about__image {
+        height: 200px;
+    }
+
+    .tech__stack__btn {
+        width: 20rem;
+    }
+
+    .tech__stack__list {
+        display: grid;
+        place-content: center;
+        grid-template-columns: repeat(3, 2fr);
+        gap: 1rem;
+    }
+
+    .tech {
+        display: flex;
+        padding: 1.5rem;
+        flex-direction: row;
+        height: 80px;
+        width: 100%;
+    }
+
+    .tech__image {
+        margin: 0 1rem 0 0;
+        width: 2rem;
+        height: 2rem;
+    }
+
+    .tech__name {
+        font-size: var(--tab-h6-font-size);
+        line-height: var(--tab-h6-line-height);
+    }
+}
+
+/* 3. Styles for screens below 600px */
+@media screen and (max-width: 600px) {
+    .about__top, .tech__stack__btn, .about__mid {
+        margin-bottom: 4rem;
+    }
+
+    .about__top {
+        padding: 0 4rem;
+    }
+
+    .about__heading {
+        font-size: var(--mobile-h4-font-size);
+        line-height: var(--mobile-h4-line-height);
+
+    }
+
+    .about__description {
+        font-size: var(--mobile-p-font-size);
+        line-height: var(--mobile-p-line-height);
+    }
+
+    .about__mid {
+        height: 60rem;
+        flex-direction: column;
+        justify-content: flex-start;
+
+    }
+
+    .about__image {
+        margin-bottom: 2rem;
+        height: 300px;
+    }
+
+    .about__image:nth-last-child(1) {
+        margin: 0;
+    }
+
+    .tech__stack__btn {
+        width: fit-content;
+        height: fit-content;
+        padding: 1rem 2rem;
+    }
+
+    .tech__stack__list {
+        display: grid;
+        place-content: center;
+        grid-template-columns: repeat(2, 2fr);
+        gap: 1rem;
+    }
+
+
+    .tech {
+        display: flex;
+        padding: 1rem;
+        flex-direction: row;
+        height: 80px;
+        width: 100%;
+    }
+
+    .tech__image {
+        margin: 0 8px 0 0;
+        width: 2rem;
+        height: 2rem;
+    }
+
+    .tech__name {
+        font-size: var(--mobile-h6-font-size);
+        line-height: var(--mobile-h6-line-height);
+    }
+}

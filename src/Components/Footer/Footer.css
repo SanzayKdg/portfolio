@@ -1,0 +1,66 @@
+.footer__container {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 16rem;
+    align-items: center;
+    border-top: 1px solid var(--black-10);
+}
+
+
+.footer__text {
+    font-family: var(--base-font-family);
+    font-size: var(--p-font-size);
+    line-height: var(--p-line-height);
+    font-weight: var(--base-font-weight);
+    color: var(--black-75);
+}
+
+.footer__social__links {
+    display: flex;
+    gap: 2rem;
+}
+
+.footer__icon {
+    width: 2rem;
+    height: 2rem;
+}
+
+
+
+/* 2. Styles for screens between 1200px and 600px */
+@media screen and (max-width: 1200px) and (min-width: 600px) {
+    .footer__container {
+        flex-direction: column-reverse;
+        gap: 1.5rem;
+        padding: 2rem 4rem;
+
+    }
+
+    .footer__text {
+        font-size: var(--tab-p-font-size);
+        line-height: var(--tab-p-line-height);
+        text-align: center;
+
+    }
+
+    .footer__icon {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+}
+
+/* 3. Styles for screens below 600px */
+@media screen and (max-width: 600px) {
+    .footer__container {
+        flex-direction: column-reverse;
+        gap: 1.5rem;
+        padding: 2rem 4rem;
+
+    }
+
+    .footer__text {
+        font-size: 15px;
+        line-height: 24px;
+        text-align: center;
+    }
+}

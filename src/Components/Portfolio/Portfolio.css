@@ -1,0 +1,224 @@
+.portfolio__container {
+    margin-bottom: 16rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 8rem;
+    /* border: 2px solid red; */
+}
+
+.portfolio__top {
+    margin-bottom: 2rem;
+}
+
+.portfolio__heading {
+    font-family: var(--heading-font-family);
+    font-size: var(--h4-font-size);
+    font-weight: 600;
+    line-height: var(--h4-line-height);
+    color: var(--secondary-color);
+}
+
+.portfolio__bottom {
+    display: flex;
+    flex-direction: column;
+    /* border: 2px solid red; */
+}
+
+.portfolio__lists {
+    display: flex;
+    padding: 2rem;
+    gap: 6rem;
+    border-radius: 50px;
+    box-shadow: -1px 1px 5px 3px rgba(38, 31, 34, 0.1);
+
+}
+
+.portfolio__left {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 25rem;
+    border-radius: 50px;
+    box-shadow: -1px 1px 5px 3px rgba(38, 31, 34, 0.1);
+}
+
+.project__link {
+    width: 100%;
+    height: 100%;
+
+}
+
+.project__image {
+    width: 100%;
+    height: 100vh;
+    border-radius: 50px;
+    transform: translateY(0%);
+    transition: transform 10s ease-in-out 0s;
+}
+
+.project__image:hover {
+    transform: translateY(-100%);
+}
+
+.portfolio__right {
+    flex: 0.5;        
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.project__title,
+.project__description,
+.tools__used {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.project__title {
+    font-family: var(--heading-font-family);
+    font-size: var(--h5-font-size);
+    font-weight: 600;
+    line-height: var(--h5-line-height);
+    color: var(--black);
+
+}
+
+.project__description {
+    font-family: var(--base-font-family);
+    font-size: var(--p-font-size);
+    font-weight: var(--base-font-weight);
+    line-height: var(--p-line-height);
+    color: var(--black-75);
+
+}
+
+.tools__used {
+    display: flex;
+    gap: 2rem;
+}
+
+.tools {
+    font-family: var(--base-font-family);
+    font-size: var(--p-font-size);
+    font-weight: var(--base-font-weight);
+    line-height: var(--p-line-height);
+    padding: 8px;
+    box-shadow: 5px 5px 10px 0px rgba(38, 31, 34, 0.05);
+    color: var(--black);
+}
+
+
+.project__demo__btns {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.demo__btns {
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-family: var(--base-font-family);
+    font-size: var(--p-font-size);
+    font-weight: var(--base-font-weight);
+    line-height: var(--p-line-height);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn__primary {
+    background-color: var(--black);
+    color: #ffff;
+}
+
+.btn__secondary {
+    background-color: var(--black-10);
+    color: var(--secondary-color);
+}
+
+.demo__icons {
+    width: 2rem;
+    height: 2rem;
+    margin-left: 8px;
+}
+
+
+
+/* 2. Styles for screens between 1200px and 600px */
+@media screen and (max-width: 1200px) and (min-width: 600px) {
+    .portfolio__container {
+        margin-bottom: 10.5rem;
+        border: 2px solid red;
+
+    }
+
+    .portfolio__top {
+     
+        border: 2px solid blue;
+        width: 100vw;
+    }
+    
+    .portfolio__heading {
+        border: 2px solid red;
+        width: 100%;
+        font-size: var(--tab-h4-font-size);
+        line-height: var(--tab-h4-line-height);
+    }
+
+    .portfolio__bottom {
+        align-items: center;
+        display: none;
+    }
+
+    .portfolio__lists {
+        flex-direction: column;
+        align-items: center;
+        gap: 4rem;
+        border: 2px solid red;
+        border-radius: 50px;
+    }
+
+    .portfolio__left {
+        height: fit-content;
+        width: fit-content;
+    }
+
+
+    .project__image {
+        width: 100%;
+        height: 100%;
+    }
+
+    .portfolio__right {
+        /* flex: 0.1; */
+    }
+
+    .project__title {
+        font-size: var(--tab-h5-font-size);
+        line-height: var(--tab-h5-line-height);
+
+    }
+
+    .project__description {
+        font-size: var(--tab-p-font-size);
+        line-height: var(--tab-p-line-height);
+
+    }
+
+}
+
+/* 3. Styles for screens below 600px */
+@media screen and (max-width: 600px) {
+    .portfolio__container {
+        margin-bottom: 6rem;
+    }
+
+    .portfolio__heading {
+        font-size: var(--mobile-h4-font-size);
+        line-height: var(--mobile-h4-line-height);
+    }
+}

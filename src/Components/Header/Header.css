@@ -1,0 +1,341 @@
+.header__container {
+    padding: 2rem 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--black-10);
+    margin-bottom: 16rem;
+}
+
+.header__ul {
+    display: flex;
+    align-items: center;
+}
+
+.header__p {
+    font-family: var(--heading-font-family);
+    color: var(--black);
+    line-height: 24px;
+    font-size: 15px;
+}
+
+.header__divider {
+    height: 2rem;
+    width: 2px;
+    background-color: var(--black-25);
+    margin: 0 64px;
+}
+
+.right__container {
+    display: flex;
+    align-items: center;
+}
+
+.list__items {
+    list-style: none;
+    width: fit-content;
+    margin-right: 2rem;
+}
+
+.list__items:nth-last-child(1) {
+    margin: 0;
+}
+
+.item__email {
+    color: var(--secondary-color);
+}
+
+.cursor__pointer,
+.header__image,
+.social__links {
+    cursor: pointer;
+}
+
+.border__radius,
+.header__image {
+    border-radius: 300px;
+}
+
+.border__radius:hover {
+    box-shadow: 0px 7.882175445556641px 6.3057403564453125px 0px #261f221a;
+}
+
+
+.header__link:hover {
+    color: var(--secondary-color);
+}
+
+.hamburger__menu {
+    border-radius: 5px;
+}
+
+.header__social__icons {
+    width: 2rem;
+    height: 2rem;
+}
+
+/* 1. Styles for screens between 1900px and 1200px */
+@media only screen and (max-width: 1800px) and (min-width: 1200px) {
+    .responsive__menu {
+        display: none;
+    }
+
+    .open__header__image {
+        width: 4rem;
+        height: 4rem;
+    }
+}
+
+/* 2. Styles for screens between 1200px and 600px */
+@media screen and (max-width: 1200px) and (min-width: 600px) {
+
+    .right__contact,
+    .header__links,
+    .header__divider {
+        display: none;
+    }
+
+    .responsive__menu,
+    .responsive__divider {
+        display: flex;
+    }
+
+    .header__container {
+        margin-bottom: 10.5rem;
+    }
+
+    .open__header__container {
+        height: 100vh;
+        display: flex;
+        align-items: flex-start;
+        padding: 0;
+        z-index: 1;
+    }
+
+    .open__nav__image {
+        margin: 0;
+        margin-bottom: 4rem;
+    }
+
+    .open__left {
+        background-color: var(--black-10);
+        width: 32rem;
+        height: 100%;
+        padding-top: 2rem;
+    }
+
+    .open__left__contents {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .open__header__image {
+        width: 150px;
+        height: 150px;
+        border: 10px solid var(--black-25);
+    }
+
+    .open__header__links {
+        display: block;
+        margin: 2rem 0;
+        text-align: center;
+        width: 100%;
+    }
+
+    .open__header__links:nth-last-child(3) {
+        margin: 0;
+    }
+
+    .open__header__ul {
+        height: 100%;
+    }
+
+    .open__header__p {
+        font-size: var(--h6-font-size);
+        font-weight: var(--h6-font-weight);
+    }
+
+    .open__right__container {
+        padding: 2.55rem 4rem;
+    }
+
+    .hamburger__menu {
+        width: 32px;
+        height: 32px;
+    }
+
+    .open__header__container .left {
+        animation: slideIn 0.6s ease-in-out;
+    }
+
+    /* .close  .close__left {
+        animation: slideOut 0.6s ease-in-out;
+    } */
+
+
+
+    .rotate__element {
+        animation: rotateAnimation 0.3s linear;
+    }
+
+    .unrotate__element {
+        animation: unrotateAnimation 0.3s linear;
+    }
+}
+
+/* 3. Styles for screens below 600px */
+@media screen and (max-width: 600px) {
+    .header__container {
+        margin-bottom: 6rem;
+    }
+
+    .header__links,
+    .right__contact,
+    .right__social,
+    .header__divider {
+        display: none;
+    }
+
+    .right__contact,
+    .header__links,
+    .header__divider {
+        display: none;
+    }
+
+    .responsive__menu {
+        display: flex;
+    }
+
+    .open__header__container {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        flex-direction: column-reverse;
+        padding: 0;
+        background-color: var(--black-10);
+    }
+
+    .open__nav__image {
+        margin: 0;
+        margin-bottom: 4rem;
+    }
+
+    .open__left {
+        background-color: transparent;
+        width: 32rem;
+        height: 100%;
+        padding-top: 2rem;
+    }
+
+    .open__left__contents {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .open__header__image {
+        width: 150px;
+        height: 150px;
+        border: 10px solid var(--black-25);
+    }
+
+    .open__header__links {
+        display: block;
+        margin: 2.5rem 0;
+        text-align: center;
+        width: 100%;
+    }
+
+    .open__header__links:nth-last-child(3) {
+        margin: 0;
+        margin-top: 1rem;
+    }
+
+    .open__header__ul {
+        height: 100%;
+    }
+
+    .open__header__p {
+        font-size: var(--h6-font-size);
+        font-weight: var(--h6-font-weight);
+    }
+
+    .open__right__container {
+        padding: 2.5rem 4rem 2rem 2rem;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .hamburger__menu {
+        width: 32px;
+        height: 32px;
+
+    }
+
+    .open__header__container, .open__header__container .left, .open__right__container .right__social {
+        animation: slideIn 0.6s ease-in-out;
+    }
+
+    /* .header__container,   .close__left { */
+    /* animation: slideOut 0.6s ease-in-out; */
+    /* } */
+
+
+    .rotate__element {
+        animation: rotateAnimation 0.3s linear;
+    }
+
+    .unrotate__element {
+        animation: unrotateAnimation 0.3s linear;
+    }
+
+    .open__right__social {
+        display: flex;
+        width: 100%;
+        position: relative;
+        top: 17rem;
+        left: 2rem;
+        justify-content: center;
+    }
+}
+
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideOut {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes rotateAnimation {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(90deg);
+    }
+}
+
+@keyframes unrotateAnimation {
+    from {
+        transform: rotate(90deg);
+    }
+
+    to {
+        transform: rotate(0deg);
+    }
+}
