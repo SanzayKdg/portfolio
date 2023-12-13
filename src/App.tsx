@@ -11,7 +11,7 @@ export const App = () => (
     <Header />
     <Hero />
     <AboutMe />
-    {/* <Portfolio /> */}
+    <Portfolio />
     <ContactMe />
     <Footer />
   </div>
