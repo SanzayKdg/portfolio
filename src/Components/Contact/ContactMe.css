@@ -136,7 +136,12 @@
 }
 
 
-
+.required{
+    color: var(--error);
+    font-size: 14px;
+    font-family: var(--base-font-family);
+    margin-top: 5px;
+}
 
 /* 2. Styles for screens between 1200px and 600px */
 @media screen and (max-width: 1200px) and (min-width: 600px) {

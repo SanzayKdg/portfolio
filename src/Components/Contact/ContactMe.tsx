@@ -1,6 +1,6 @@
 import { FormLabel, Input, Textarea, useToast } from "@chakra-ui/react";
 import emailjs from "@emailjs/browser";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import "./ContactMe.css";
 import { validate, validationErrors } from "./error";
 const ContactMe = () => {
@@ -8,8 +8,6 @@ const ContactMe = () => {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
 
-  const [error, setError] = useState(validationErrors);
-  console.log(error);
   const [emailSrc, setEmailSrc] = useState("");
   const [phoneSrc, setPhoneSrc] = useState("");
   const [locationSrc, setLocationSrc] = useState("");
@@ -17,61 +15,79 @@ const ContactMe = () => {
   const toast = useToast();
   const position = "bottom";
 
+  const [error, setError] = useState(validationErrors);
+
   const validateError = validate(name, email, message);
-  const sendEmail = (e: any) => {
-    console.log(validateError);
-    e.preventDefault();
+  useEffect(() => {
     if (Object.keys(validateError).length > 0) {
       setError(validateError);
       return;
     }
-    if (error) {
+  }, [name, email, message, validateError]);
+
+  const sendEmail = (e: any) => {
+    e.preventDefault();
+
+    if (email === "" || message === "" || email === "") {
       toast({
         title: "Error!",
-        description: "Something went wrong.",
+        description: "Please fill all the required fields.",
+        position,
+        isClosable: true,
+        status: "error",
+        duration: 2000,
+      });
+      return;
+    }
+
+    if (!error.name && !error.message && !error.email) {
+      toast({
+        status: "loading",
+        title: "Loading",
+        description: "Sending Message.",
+        position,
+        duration: 500,
+      });
+      // emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, 'YOUR_PUBLIC_KEY')
+      emailjs
+        .sendForm(
+          "service_u92l7aa",
+          "template_fnqkrlm",
+          form.current,
+          "Wy6RWM7YdDaaxGrwO"
+        )
+        .then(
+          (res: any) => {
+            toast({
+              title: "Success",
+              description: "Your message has been sent.",
+              position,
+              isClosable: true,
+              status: "success",
+              duration: 2000,
+            });
+          },
+          (error: any) => {
+            toast({
+              title: "Error!",
+              description: "Something went wrong. Try Again",
+              position,
+              isClosable: true,
+              status: "error",
+              duration: 2000,
+            });
+          }
+        );
+    } else {
+      toast({
+        title: "Error!",
+        description: "Please fill all the required fields.",
         position,
         isClosable: true,
         status: "error",
         duration: 2000,
       });
     }
-    toast({
-      status: "loading",
-      title: "Loading",
-      description: "Sending Message.",
-      position,
-      duration: 500,
-    });
-    // emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, 'YOUR_PUBLIC_KEY')
-    emailjs
-      .sendForm(
-        "service_u92l7aa",
-        "template_fnqkrlm",
-        form.current,
-        "Wy6RWM7YdDaaxGrwO"
-      )
-      .then(
-        (res: any) => {
-          toast({
-            title: "Success",
-            description: "Your message has been sent.",
-            position,
-            isClosable: true,
-            status: "success",
-            duration: 2000,
-          });
-        },
-        (error: any) => {
-          toast({
-            title: "Error!",
-            description: " Cannot send message at the moment.",
-            position,
-            isClosable: true,
-            status: "error",
-            duration: 2000,
-          });
-        }
-      );
 
     clearForm();
   };
@@ -158,8 +174,13 @@ const ContactMe = () => {
         </div>
         <div className="right__contact__section">
           <form onSubmit={sendEmail} ref={form} className="contact__form">
+            <FormLabel className="required">
+              Please fill all the required fields. (*)
+            </FormLabel>
             <div className="form__item">
-              <FormLabel className="form__label">Your Name</FormLabel>
+              <FormLabel className="form__label">
+                Your Name <span className="required">*</span>
+              </FormLabel>
               <Input
                 type="text"
                 value={name}
@@ -170,11 +191,13 @@ const ContactMe = () => {
                 name="from_name"
                 className="form__input"
               />
-              {error.name && <p>{error.name}</p>}
+              {error.name && <p className="required">{error.name}</p>}
             </div>
 
             <div className="form__item">
-              <FormLabel className="form__label">Your Email</FormLabel>
+              <FormLabel className="form__label">
+                Your Email <span className="required">*</span>
+              </FormLabel>
               <Input
                 type="email"
                 value={email}
@@ -183,11 +206,13 @@ const ContactMe = () => {
                 name="from_email"
                 className="form__input"
               />
-              {error.email && <p>{error.email}</p>}
+              {error.email && <p className="required">{error.email}</p>}
             </div>
 
             <div className="form__item">
-              <FormLabel className="form__label">Your Message</FormLabel>
+              <FormLabel className="form__label">
+                Your Message <span className="required">*</span>
+              </FormLabel>
               <Textarea
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
@@ -196,7 +221,7 @@ const ContactMe = () => {
                 rows={10}
                 className="form__input"
               />
-              {error.message && <p>{error.message}</p>}
+              {error.message && <p className="required">{error.message}</p>}
             </div>
 
             <button className="send__form__btn" type="submit">
