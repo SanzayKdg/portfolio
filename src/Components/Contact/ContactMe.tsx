@@ -2,27 +2,47 @@ import { FormLabel, Input, Textarea, useToast } from "@chakra-ui/react";
 import emailjs from "@emailjs/browser";
 import { useRef, useState } from "react";
 import "./ContactMe.css";
+import { validate, validationErrors } from "./error";
 const ContactMe = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
 
+  const [error, setError] = useState(validationErrors);
+  console.log(error);
   const [emailSrc, setEmailSrc] = useState("");
   const [phoneSrc, setPhoneSrc] = useState("");
   const [locationSrc, setLocationSrc] = useState("");
   const form: any = useRef();
   const toast = useToast();
   const position = "bottom";
+
+  const validateError = validate(name, email, message);
   const sendEmail = (e: any) => {
+    console.log(validateError);
     e.preventDefault();
-    // emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, 'YOUR_PUBLIC_KEY')
+    if (Object.keys(validateError).length > 0) {
+      setError(validateError);
+      return;
+    }
+    if (error) {
+      toast({
+        title: "Error!",
+        description: "Something went wrong.",
+        position,
+        isClosable: true,
+        status: "error",
+        duration: 2000,
+      });
+    }
     toast({
       status: "loading",
       title: "Loading",
       description: "Sending Message.",
       position,
-      duration: 1000,
+      duration: 500,
     });
+    // emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, 'YOUR_PUBLIC_KEY')
     emailjs
       .sendForm(
         "service_u92l7aa",
@@ -81,7 +101,7 @@ const ContactMe = () => {
                 alt="email icon"
               />
             </div>
-            <div>
+            <div className="email__label">
               <h5 className="contact__label">Email:</h5>
               <p className="contact__description">sanjaykhadgi9861@gmail.com</p>
             </div>
@@ -143,11 +163,14 @@ const ContactMe = () => {
               <Input
                 type="text"
                 value={name}
-                onChange={(e) => setName(e.target.value)}
+                onChange={(e) => {
+                  setName(e.target.value);
+                }}
                 placeholder="John Doe"
                 name="from_name"
                 className="form__input"
               />
+              {error.name && <p>{error.name}</p>}
             </div>
 
             <div className="form__item">
@@ -160,6 +183,7 @@ const ContactMe = () => {
                 name="from_email"
                 className="form__input"
               />
+              {error.email && <p>{error.email}</p>}
             </div>
 
             <div className="form__item">
@@ -172,6 +196,7 @@ const ContactMe = () => {
                 rows={10}
                 className="form__input"
               />
+              {error.message && <p>{error.message}</p>}
             </div>
 
             <button className="send__form__btn" type="submit">

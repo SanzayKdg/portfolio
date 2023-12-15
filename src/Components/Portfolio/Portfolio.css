@@ -2,10 +2,9 @@
     margin-bottom: 16rem;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     padding: 0 8rem;
-    /* border: 2px solid red; */
 }
+
 
 .portfolio__top {
     margin-bottom: 2rem;
@@ -22,7 +21,6 @@
 .portfolio__bottom {
     display: flex;
     flex-direction: column;
-    /* border: 2px solid red; */
 }
 
 .portfolio__lists {
@@ -63,18 +61,23 @@
 }
 
 .portfolio__right {
-    flex: 0.5;        
+    flex: 0.5;
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 2rem;
 }
 
+.project__description__container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
 
 .project__title,
 .project__description,
 .tools__used {
     text-align: center;
-    margin-bottom: 2rem;
 }
 
 .project__title {
@@ -98,6 +101,8 @@
 .tools__used {
     display: flex;
     gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .tools {
@@ -152,49 +157,23 @@
 @media screen and (max-width: 1200px) and (min-width: 600px) {
     .portfolio__container {
         margin-bottom: 10.5rem;
-        border: 2px solid red;
-
+        padding: 0 8rem;
     }
 
-    .portfolio__top {
-     
-        border: 2px solid blue;
-        width: 100vw;
-    }
-    
     .portfolio__heading {
-        border: 2px solid red;
-        width: 100%;
         font-size: var(--tab-h4-font-size);
         line-height: var(--tab-h4-line-height);
     }
 
-    .portfolio__bottom {
-        align-items: center;
-        display: none;
-    }
-
     .portfolio__lists {
         flex-direction: column;
-        align-items: center;
         gap: 4rem;
-        border: 2px solid red;
-        border-radius: 50px;
+        border-radius: 25px;
     }
-
-    .portfolio__left {
-        height: fit-content;
-        width: fit-content;
-    }
-
 
     .project__image {
         width: 100%;
         height: 100%;
-    }
-
-    .portfolio__right {
-        /* flex: 0.1; */
     }
 
     .project__title {
@@ -209,16 +188,71 @@
 
     }
 
+    .tools {
+        font-size: var(--tab-p-font-size);
+        line-height: var(--tab-p-line-height);
+    }
+
+    .demo__btns {
+        font-size: var(--tab-p-font-size);
+        line-height: var(--tab-p-line-height);
+    }
+
+    .demo__icons {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+
 }
 
 /* 3. Styles for screens below 600px */
 @media screen and (max-width: 600px) {
     .portfolio__container {
         margin-bottom: 6rem;
+        padding: 0 1.5rem;
     }
 
     .portfolio__heading {
         font-size: var(--mobile-h4-font-size);
         line-height: var(--mobile-h4-line-height);
     }
+
+
+    .portfolio__lists {
+        flex-direction: column;
+        gap: 3rem;
+        border-radius: 25px;
+        padding: 1rem;
+    }
+    .portfolio__left{
+        height: 20rem;
+    }
+
+    .project__title {
+        font-size: var(--mobile-h5-font-size);
+        line-height: var(--mobile-h5-line-height);
+
+    }
+
+    .project__description {
+        font-size: var(--mobile-p-font-size);
+        line-height: var(--mobile-p-line-height);
+
+    }
+
+    .tools {
+        font-size: var(--mobile-p-font-size);
+        line-height: var(--mobile-p-line-height);
+    }
+
+    .tools__used {
+        gap: 1rem
+    }
+
+    .demo__btns {
+        font-size: var(--mobile-p-font-size);
+        line-height: var(--mobile-p-line-height);
+        padding: 8px 16px;
+    }
+
 }

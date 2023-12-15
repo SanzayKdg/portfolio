@@ -6,7 +6,7 @@ const Hero = () => {
     <div className="hero__section">
       <h3 className="hero__title1">Hey there, I'm Sanjay Khadgi.</h3>
       <h1 className="hero__mainTitle">
-        <TypeWriter
+        {/* <TypeWriter
           options={{
             autoStart: true,
             loop: true,
@@ -17,8 +17,8 @@ const Hero = () => {
               "Web Designer",
             ],
           }}
-        />
-        {/* MERN STACK DEVELOPER */}
+        /> */}
+        MERN STACK DEVELOPER
       </h1>
       <p className="hero__description">
         I make websites awesome using the MERN stack. If you want a developer

@@ -108,13 +108,19 @@
 
 /* 2. Styles for screens between 1200px and 600px */
 @media screen and (max-width: 1200px) and (min-width: 600px) {
-    .about__container{
+    .about__container {
         margin-bottom: 10.5rem;
 
     }
+
+    .about__top {
+        padding: 0 8rem;
+    }
+
     .about__top, .about__mid, .tech__stack__btn {
         margin-bottom: 6rem;
     }
+
     .about__heading {
         font-size: var(--tab-h4-font-size);
         line-height: var(--tab-h4-line-height);
@@ -162,12 +168,17 @@
 
 /* 3. Styles for screens below 600px */
 @media screen and (max-width: 600px) {
+
+    .about__container {
+        margin-bottom: 6rem;
+    }
+
     .about__top, .tech__stack__btn, .about__mid {
         margin-bottom: 4rem;
     }
 
     .about__top {
-        padding: 0 4rem;
+        padding: 0 1.5rem;
     }
 
     .about__heading {
