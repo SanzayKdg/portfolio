@@ -21,6 +21,7 @@
 .portfolio__bottom {
     display: flex;
     flex-direction: column;
+    gap: 2rem;
 }
 
 .portfolio__lists {
