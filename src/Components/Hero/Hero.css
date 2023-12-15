@@ -15,19 +15,19 @@
     color: transparent;
     text-align: center;
     font-family: var(--heading-font-family);
-    font-size: var(--h3-font-size);
-    line-height: var(--h3-line-height);
-    font-weight: var(--h3-font-weight);
+    font-size: var(--h2-font-size);
+    line-height: var(--h2-line-height);
+    font-weight: 600;
     margin-bottom: 2rem;
 }
 
 .hero__mainTitle {
     text-align: center;
     font-family: var(--heading-font-family);
-    font-size: 105px;
-    line-height: 134px;
+    font-size: var(--h3-font-size);
+    line-height: var(--h3-line-height);
+    font-weight: var(--h3-font-weight);
     margin-bottom: 2rem;
-    font-weight: 600;
     color: var(--black);
 }
 
@@ -79,16 +79,16 @@
     }
 
     .hero__title1 {
-        font-size: var(--tab-h3-font-size);
-        line-height: var(--tab-h3-line-height);
+        font-size: var(--tab-h2-font-size);
+        line-height: var(--tab-h2-line-height);
         width: fit-content;
 
     }
 
     .hero__mainTitle {
-        font-size: var(--tab-h1-font-size);
-        line-height: var(--tab-h1-line-height);
-        font-weight: var(--tab-mobile-h1-font-weight);
+        font-size: var(--tab-h3-font-size);
+        line-height: var(--tab-h3-line-height);
+
         width: fit-content;
 
     }
@@ -120,18 +120,16 @@
     }
 
     .hero__title1 {
-        font-size: var(--mobile-h3-font-size);
-        line-height: var(mobile-h3-line-height);
+        font-size: var(--mobile-h2-font-size);
+        line-height: var(--mobile-h2-line-height);
         width: fit-content;
 
     }
 
     .hero__mainTitle {
-        font-size: var(--mobile-h1-font-size);
-        line-height: var(--mobile-h1-line-height);
-        font-weight: var(--tab-mobile-h1-font-weight);
+        font-size: 30px;
+        line-height: var(--mobile-h3-line-height);
         width: fit-content;
-
     }
 
     .hero__description {

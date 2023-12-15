@@ -6,7 +6,8 @@ const Footer = () => {
   return (
     <div className="footer__container">
       <p className="footer__text">
-        &copy; Copyright Sanjay Khadgi 2023. All rights reserved.
+        &copy; Copyright Sanjay Khadgi {new Date().getFullYear()}. All rights
+        reserved.
       </p>
       <div className="footer__social__links">
         <a

@@ -40,6 +40,7 @@
     height: 25rem;
     border-radius: 50px;
     box-shadow: -1px 1px 5px 3px rgba(38, 31, 34, 0.1);
+    flex: 0.5;
 }
 
 .project__link {
@@ -157,7 +158,7 @@
 @media screen and (max-width: 1200px) and (min-width: 600px) {
     .portfolio__container {
         margin-bottom: 10.5rem;
-        padding: 0 8rem;
+        padding: 0 4rem;
     }
 
     .portfolio__heading {
@@ -169,6 +170,7 @@
         flex-direction: column;
         gap: 4rem;
         border-radius: 25px;
+        padding: 2rem 1rem ;
     }
 
     .project__image {
@@ -224,8 +226,9 @@
         border-radius: 25px;
         padding: 1rem;
     }
-    .portfolio__left{
-        height: 20rem;
+
+    .project__image{
+        height: fit-content;
     }
 
     .project__title {

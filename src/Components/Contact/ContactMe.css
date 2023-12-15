@@ -139,8 +139,8 @@
 
 
 /* 2. Styles for screens between 1200px and 600px */
-@media screen and (max-width: 1200px) and (min-width: 650px) {
-    .contact__container {margin-bottom: 10.5rem;}
+@media screen and (max-width: 1200px) and (min-width: 600px) {
+    .contact__container {margin-bottom: 10.5rem; padding: 0 4rem;}
     
     .contact__heading {
         font-size: var(--tab-h4-font-size);
