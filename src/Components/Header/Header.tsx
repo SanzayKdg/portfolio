@@ -20,7 +20,7 @@ const Header = () => {
             }`}
           >
             <img
-              src={close ? "./logo528.png" : "/logo.jpg"}
+              src="/528logo.png"
               className={`header__image ${close ? "open__header__image" : ""}`}
               alt="profile-img"
             />
@@ -30,9 +30,10 @@ const Header = () => {
               close ? "open__header__links" : ""
             }`}
           >
-            <p onClick={() => {
-              setClose(!close);
-            }}
+            <p
+              onClick={() => {
+                setClose(!close);
+              }}
               className={`header__p header__link ${
                 close ? "open__header__p" : ""
               }`}
@@ -45,9 +46,10 @@ const Header = () => {
               close ? "open__header__links" : ""
             }`}
           >
-            <p onClick={() => {
-              setClose(!close);
-            }}
+            <p
+              onClick={() => {
+                setClose(!close);
+              }}
               className={`header__p header__link ${
                 close ? "open__header__p" : ""
               }`}
@@ -60,9 +62,10 @@ const Header = () => {
               close ? "open__header__links" : ""
             }`}
           >
-            <p onClick={() => {
-              setClose(!close);
-            }}
+            <p
+              onClick={() => {
+                setClose(!close);
+              }}
               className={`header__p header__link ${
                 close ? "open__header__p" : ""
               }`}
